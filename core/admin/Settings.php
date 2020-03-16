@@ -60,46 +60,46 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Widgets', STAX_WOO_DOMAIN ),
+			__( 'STAX Woocommerce Elementor - Widgets', STAX_WOO_DOMAIN ),
 			__( 'Widgets', STAX_WOO_DOMAIN ),
 			'manage_options',
-			'stax-elementor-widgets',
+			'stax-woocommerce-elementor-widgets',
 			[ $this, 'settings_template' ]
 		);
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Plugins', STAX_WOO_DOMAIN ),
+			__( 'STAX Woocommerce Elementor - Plugins', STAX_WOO_DOMAIN ),
 			__( 'Plugins', STAX_WOO_DOMAIN ),
 			'manage_options',
-			'stax-elementor-plugins',
+			'stax-woocommerce-elementor-plugins',
 			[ $this, 'settings_template' ]
 		);
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Templates', STAX_WOO_DOMAIN ),
+			__( 'STAX Woocommerce Elementor - Templates', STAX_WOO_DOMAIN ),
 			__( 'Templates', STAX_WOO_DOMAIN ),
 			'manage_options',
-			'stax-elementor-templates',
+			'stax-woocommerce-elementor-templates',
 			[ $this, 'settings_template' ]
 		);
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Modules', STAX_WOO_DOMAIN ),
+			__( 'STAX Woocommerce Elementor - Modules', STAX_WOO_DOMAIN ),
 			__( 'Modules', STAX_WOO_DOMAIN ),
 			'manage_options',
-			'stax-elementor-modules',
+			'stax-woocommerce-elementor-modules',
 			[ $this, 'settings_template' ]
 		);
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Help', STAX_WOO_DOMAIN ),
+			__( 'STAX Woocommerce Elementor - Help', STAX_WOO_DOMAIN ),
 			__( 'Help', STAX_WOO_DOMAIN ),
 			'manage_options',
-			'stax-elementor-help',
+			'stax-woocommerce-elementor-help',
 			[ $this, 'settings_template' ]
 		);*/
 
@@ -124,7 +124,7 @@ class Settings {
 	 * @return string
 	 */
 	public function add_admin_body_class( $classes ) {
-		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-elementor' ) !== false ) {
+		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-woocommerce-elementor' ) !== false ) {
 			$classes .= ' stax-elementor-admin-page';
 		}
 

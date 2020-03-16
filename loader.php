@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'STAX_WOO_VERSION', '1.0.0' );
 define( 'STAX_WOO_DOMAIN', 'stax-woocommerce-for-elementor' );
 define( 'STAX_WOO_HOOK_PREFIX', 'stax_el_' );
-define( 'STAX_WOO_SLUG_PREFIX', 'stax-elementor-' );
+define( 'STAX_WOO_SLUG_PREFIX', 'stax-woocommerce-' );
 
 define( 'STAX_WOO_FILE', __FILE__ );
 define( 'STAX_WOO_PLUGIN_BASE', plugin_basename( STAX_WOO_FILE ) );
