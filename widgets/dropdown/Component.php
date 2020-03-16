@@ -14,7 +14,7 @@ use Elementor\Group_Control_Typography;
 use Elementor\Icons_Manager;
 use Elementor\Repeater;
 
-use StaxAddons\Widgets\Base;
+use StaxWoocommerce\Widgets\Base;
 
 class Component extends Base {
 

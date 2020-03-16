@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-use StaxAddons\StaxWidgets;
+use StaxWoocommerce\StaxWidgets;
 
 /**
  * Class Base
@@ -117,6 +117,13 @@ abstract class Base extends \Elementor\Widget_Base {
 	 */
 	protected function get_widget_style_handle() {
 		return $this->get_name() . '-style';
+	}
+
+	/**
+	 * Product rendered
+	 */
+	protected function require_extra_classes() {
+		require_once STAX_WOO_CORE_PATH . 'woocommerce/ProductsRenderer.php';
 	}
 
 }

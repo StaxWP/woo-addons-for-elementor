@@ -32,7 +32,7 @@ class StaxWidgets {
 	}
 
 	/**
-	 * StaxAddons constructor.
+	 * StaxWidgets constructor.
 	 */
 	public function __construct() {
 		add_action( 'elementor/elements/categories_registered', [ $this, 'register_elementor_category' ] );
@@ -51,64 +51,11 @@ class StaxWidgets {
 	public function get_widgets( $active = false, $withStatus = false ) {
 		$widgets = [];
 
-		$widgets['breadcrumbs'] = [
-			'scope' => 'Breadcrumbs',
-			'name'  => 'Breadcrumbs',
-			'slug'  => 'stax-el-breadcrumbs'
+		$widgets['products'] = [
+			'scope' => 'Products',
+			'name'  => 'Products',
+			'slug'  => 'stax-woo-products'
 		];
-
-		$widgets['button'] = [
-			'scope' => 'Button',
-			'name'  => 'Button',
-			'slug'  => 'stax-el-button'
-		];
-
-		$widgets['dropdown'] = [
-			'scope' => 'Dropdown',
-			'name'  => 'Dropdown',
-			'slug'  => 'stax-el-dropdown'
-		];
-
-		$widgets['heading'] = [
-			'scope' => 'Heading',
-			'name'  => 'Heading',
-			'slug'  => 'stax-el-heading'
-		];
-
-		$widgets['read-more'] = [
-			'scope' => 'ReadMore',
-			'name'  => 'Read More',
-			'slug'  => 'stax-el-read-more'
-		];
-
-//		$widgets['info-box'] = [
-//			'scope' => 'InfoBox',
-//			'name'  => 'Info Box',
-//			'slug'  => 'stax-el-info-box'
-//		];
-//
-		$widgets['scroll-top'] = [
-			'scope' => 'ScrollTop',
-			'name'  => 'Scroll Top',
-			'slug'  => 'stax-el-scroll-top'
-		];
-//
-//		$widgets['separator'] = [
-//			'scope' => 'Separator',
-//			'name'  => 'Separator',
-//			'slug'  => 'stax-el-separator'
-//		];
-
-		$widgets['slider'] = [
-			'scope' => 'Slider',
-			'name'  => 'Slider',
-			'slug'  => 'stax-el-slider'
-		];
-
-//		$widgets['testimonial'] = [
-//			'scope' => 'Testimonial',
-//			'slug'  => 'stax-el-testimonial'
-//		];
 
 		// Remove disabled widgets
 		if ( $active && ! $withStatus ) {
@@ -151,7 +98,7 @@ class StaxWidgets {
 					if ( $widget_file = $this->get_widget_file( $folder ) ) {
 
 						require_once $widget_file;
-						$class_name = '\StaxAddons\Widgets\\' . $element['scope'] . '\Component';
+						$class_name = '\StaxWoocommerce\Widgets\\' . $element['scope'] . '\Component';
 						$elementor->widgets_manager->register_widget_type( new $class_name );
 					}
 				}
@@ -165,9 +112,9 @@ class StaxWidgets {
 	public function register_elementor_category() {
 		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( Plugin::class, 'instance' ) ) {
 			\Elementor\Plugin::instance()->elements_manager->add_category(
-				'stax-elementor',
+				'stax-woo-elementor',
 				[
-					'title' => 'Stax Elements',
+					'title' => 'Stax Woocommerce Elements',
 					'icon'  => 'fa fa-plug'
 				]
 			);

@@ -29,7 +29,7 @@ class Plugin {
 	}
 
 	/**
-	 * StaxAddons constructor.
+	 * Plugin constructor.
 	 */
 	public function __construct() {
 
