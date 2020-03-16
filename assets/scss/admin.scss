@@ -1,0 +1,27 @@
+@tailwind base;
+
+@tailwind components;
+
+.stax-elementor-admin-page #contextual-help-link-wrap {
+  display: none !important;
+}
+
+.stax-elementor-admin-page .stax-main ul li {
+  margin-bottom: 0;
+}
+
+.stax-elementor-admin-page .stax-main #go-pro-rocket-icon {
+  width: 100px;
+  transform: rotate(-45deg);
+}
+
+.stax-elementor-admin-page .stax-main .rocket-flame {
+  transform-origin: 15px 37.5px;
+}
+
+.stax-elementor-admin-page .stax-main a:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+@tailwind utilities;
