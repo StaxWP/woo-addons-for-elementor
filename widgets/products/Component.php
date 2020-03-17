@@ -33,7 +33,7 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'sq-icon-dropdown sq-widget-label';
+		return 'sq-icon-woo_products sq-widget-label';
 	}
 
 	public function get_categories() {
