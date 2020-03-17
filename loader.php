@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Elementor Woocommerce - Stax
+ * Plugin Name: Elementor WooCommerce - Stax
  * Description:
  * Plugin URI: https://staxbuilder.com
  * Author: StaxWP

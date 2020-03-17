@@ -320,7 +320,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Box_Shadow::get_type(),
 			[
-				'name'     => 'box_shadow',
+				'name'     => 'image_box_shadow',
 				'label'    => __( 'Box Shadow', STAX_WOO_DOMAIN ),
 				'selector' => '{{WRAPPER}}.elementor-wc-products .attachment-woocommerce_thumbnail',
 			]

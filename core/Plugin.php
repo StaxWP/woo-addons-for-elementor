@@ -32,7 +32,6 @@ class Plugin {
 	 * Plugin constructor.
 	 */
 	public function __construct() {
-
 		require_once STAX_WOO_CORE_PATH . '/Utils.php';
 		require_once STAX_WOO_CORE_PATH . '/StaxWidgets.php';
 
@@ -54,7 +53,18 @@ class Plugin {
 		add_action( 'admin_footer', function () {
 			if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_WOO_SLUG_PREFIX ) !== false ):
 				?>
-                <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+                <script type="text/javascript">!function (e, t, n) {
+                        function a() {
+                            var e = t.getElementsByTagName("script")[0], n = t.createElement("script");
+                            n.type = "text/javascript", n.async = !0, n.src = "https://beacon-v2.helpscout.net", e.parentNode.insertBefore(n, e)
+                        }
+
+                        if (e.Beacon = n = function (t, n, a) {
+                            e.Beacon.readyQueue.push({method: t, options: n, data: a})
+                        }, n.readyQueue = [], "complete" === t.readyState) return a();
+                        e.attachEvent ? e.attachEvent("onload", a) : e.addEventListener("load", a, !1)
+                    }(window, document, window.Beacon || function () {
+                    });</script>
                 <script type="text/javascript">window.Beacon('init', '1b5e8cdd-8c69-499a-add2-c73fd404ed5e')</script>
 			<?php endif;
 		} );

@@ -177,6 +177,16 @@ class Utils {
 		}
 	}
 
+	/**
+	 * Check if WooCommerce is installed and active
+	 *
+	 * @return false|int
+	 */
+	public static function woocommerce_is_active() {
+		$all_plugins = apply_filters( 'active_plugins', get_option( 'active_plugins' ) );
+
+		return (bool) stripos( implode( $all_plugins ), 'woocommerce.php' );
+	}
 }
 
 Utils::instance();

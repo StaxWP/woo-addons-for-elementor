@@ -37,6 +37,7 @@ class Settings {
 	 * Settings constructor.
 	 */
 	public function __construct() {
+		add_action( 'admin_notices', [ $this, 'woocommerce_not_installed_notice' ] );
 		add_action( 'admin_menu', [ $this, 'register_menu' ], 20 );
 		add_action( 'admin_menu', [ $this, 'admin_menu_change_name' ], 200 );
 		add_filter( 'admin_body_class', [ $this, 'add_admin_body_class' ] );
@@ -189,6 +190,20 @@ class Settings {
 
 			wp_enqueue_style( 'stax-addons-tw' );
 			wp_enqueue_script( 'stax-addons-js' );
+		}
+	}
+
+	public function woocommerce_not_installed_notice() {
+		if ( ! Utils::woocommerce_is_active() ) {
+			?>
+            <div class="notice notice-warning is-dismissible">
+                <p>
+                    Elementor Woocommerce - Stax requires WooCommerce. Please install and activate
+                    <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a>
+                    in order to use our Elementor Widgets.
+                </p>
+            </div>
+			<?php
 		}
 	}
 
