@@ -59,6 +59,12 @@ class StaxWidgets {
 			'slug'  => 'stax-woo-products'
 		];
 
+		$widgets['product-images'] = [
+			'scope' => 'ProductImages',
+			'name'  => 'Product Images',
+			'slug'  => 'stax-woo-product-images'
+		];
+
 		// Remove disabled widgets
 		if ( $active && ! $withStatus ) {
 			$disabled_widgets = get_option( '_stax_woocommerce_disabled_widgets', [] );

@@ -83,10 +83,23 @@ abstract class Base extends \Elementor\Widget_Base {
 		}
 	}
 
+	/**
+	 * @return array
+	 */
+	public function get_categories() {
+		return [ 'stax-woo-elementor' ];
+	}
+
+	/**
+	 * @return array
+	 */
 	public function get_script_depends() {
 		return [ $this->get_widget_script_handle() ];
 	}
 
+	/**
+	 * @return array
+	 */
 	public function get_style_depends() {
 		return [ $this->get_widget_style_handle() ];
 	}

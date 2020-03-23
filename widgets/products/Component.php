@@ -36,8 +36,8 @@ class Component extends Base {
 		return 'sq-icon-woo_products sq-widget-label';
 	}
 
-	public function get_categories() {
-		return [ 'stax-woo-elementor' ];
+	public function get_keywords() {
+		return [ 'woocommerce', 'shop', 'store', 'products' ];
 	}
 
 	protected function _register_controls() {
