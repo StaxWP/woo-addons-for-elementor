@@ -50,6 +50,18 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'default_style',
+			[
+				'label'     => __( 'Default Style', STAX_WOO_DOMAIN ),
+				'type'      => Controls_Manager::HIDDEN,
+				'default'   => '1',
+				'selectors' => [
+					'{{WRAPPER}} div.images' => 'overflow: auto;'
+				]
+			]
+		);
+
+		$this->add_control(
 			'wc_style_warning',
 			[
 				'type'            => Controls_Manager::RAW_HTML,
