@@ -136,6 +136,7 @@ abstract class Base extends \Elementor\Widget_Base {
 	 * Product rendered
 	 */
 	protected function require_extra_classes() {
+		require_once STAX_WOO_CORE_PATH . 'woocommerce/CurrentQueryRenderer.php';
 		require_once STAX_WOO_CORE_PATH . 'woocommerce/ProductsRenderer.php';
 	}
 

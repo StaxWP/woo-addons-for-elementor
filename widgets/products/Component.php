@@ -12,6 +12,7 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
 
+use StaxWoocommerce\Woocommerce\CurrentQueryRenderer;
 use StaxWoocommerce\Woocommerce\ProductsRenderer;
 
 use StaxWoocommerce\Widgets\Base;
@@ -152,9 +153,10 @@ class Component extends Base {
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'product',
 				'options' => [
-					'product'  => __( 'Latest Products', STAX_WOO_DOMAIN ),
-					'sale'     => __( 'Sale', STAX_WOO_DOMAIN ),
-					'featured' => __( 'Featured', STAX_WOO_DOMAIN )
+					'current_query' => __( 'Current Query', STAX_WOO_DOMAIN ),
+					'product'       => __( 'Latest Products', STAX_WOO_DOMAIN ),
+					'sale'          => __( 'Sale', STAX_WOO_DOMAIN ),
+					'featured'      => __( 'Featured', STAX_WOO_DOMAIN )
 				],
 			]
 		);
@@ -1261,6 +1263,12 @@ class Component extends Base {
 	}
 
 	protected function get_shortcode_object( $settings ) {
+		if ( 'current_query' === $settings[ ProductsRenderer::QUERY_CONTROL_NAME . '_post_type' ] ) {
+			$type = 'current_query';
+
+			return new CurrentQueryRenderer( $settings, $type );
+		}
+
 		$type = 'products';
 
 		return new ProductsRenderer( $settings, $type );
