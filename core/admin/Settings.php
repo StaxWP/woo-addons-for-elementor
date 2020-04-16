@@ -50,8 +50,8 @@ class Settings {
 	 */
 	public function register_menu() {
 		add_menu_page(
-			__( 'STAX Woocommerce - Dashboard', 'stax-woo-for-elementor' ),
-			__( 'Elementor Woocommerce', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce - Dashboard', 'stax-woo-addons-for-elementor' ),
+			__( 'Elementor Woocommerce', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-widgets',
 			[ $this, 'settings_template' ],
@@ -61,8 +61,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Widgets', 'stax-woo-for-elementor' ),
-			__( 'Widgets', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce Elementor - Widgets', 'stax-woo-addons-for-elementor' ),
+			__( 'Widgets', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-elementor-widgets',
 			[ $this, 'settings_template' ]
@@ -70,8 +70,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Plugins', 'stax-woo-for-elementor' ),
-			__( 'Plugins', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce Elementor - Plugins', 'stax-woo-addons-for-elementor' ),
+			__( 'Plugins', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-elementor-plugins',
 			[ $this, 'settings_template' ]
@@ -79,8 +79,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Templates', 'stax-woo-for-elementor' ),
-			__( 'Templates', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce Elementor - Templates', 'stax-woo-addons-for-elementor' ),
+			__( 'Templates', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-elementor-templates',
 			[ $this, 'settings_template' ]
@@ -88,8 +88,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Modules', 'stax-woo-for-elementor' ),
-			__( 'Modules', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce Elementor - Modules', 'stax-woo-addons-for-elementor' ),
+			__( 'Modules', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-elementor-modules',
 			[ $this, 'settings_template' ]
@@ -97,8 +97,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Help', 'stax-woo-for-elementor' ),
-			__( 'Help', 'stax-woo-for-elementor' ),
+			__( 'STAX Woocommerce Elementor - Help', 'stax-woo-addons-for-elementor' ),
+			__( 'Help', 'stax-woo-addons-for-elementor' ),
 			'manage_options',
 			'stax-woocommerce-elementor-help',
 			[ $this, 'settings_template' ]
@@ -113,7 +113,7 @@ class Settings {
 		global $submenu;
 
 		if ( isset( $submenu[ Plugin::instance()->get_slug() ] ) ) {
-			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', 'stax-woo-for-elementor' );
+			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', 'stax-woo-addons-for-elementor' );
 		}
 	}
 
@@ -198,9 +198,9 @@ class Settings {
 			?>
             <div class="notice notice-warning is-dismissible">
                 <p>
-                    Elementor Woocommerce - Stax requires WooCommerce. Please install and activate
-                    <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a>
-                    in order to use our Elementor Widgets.
+					<?php wp_kses_post( printf(
+						__( 'Woo Addons for Elementor - Stax requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.' ),
+						'https://wordpress.org/plugins/woocommerce/' ) ); ?>
                 </p>
             </div>
 			<?php

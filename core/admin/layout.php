@@ -11,7 +11,7 @@
 
                 <div class="ste-text-right">
                     <h1 class="ste-block ste-leading-normal ste-my-0"><span class="ste-font-light">Welcome to</span> STAX</h1>
-                    <div class="ste-font-medium ste-text-lg ste-text-gray-600">Elementor Addons Kit</div>
+                    <div class="ste-font-medium ste-text-lg ste-text-gray-600"><?php esc_html__( 'Woo Addons for Elementor', 'stax-woo-addons-for-elementor' ) ;?></div>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
     <div class="ste-container ste-mx-auto ste-my-10">
         <div class="ste-flex ste-justify-center">
             <div class="ste-text-gray-400 ste-text-sm ste-font-medium ste-uppercase">
-		        <?php printf( __( 'Version %s', 'stax-woo-for-elementor' ), STAX_WOO_VERSION ); ?>
+		        <?php printf( esc_html__( 'Version %s', 'stax-woo-addons-for-elementor' ), STAX_WOO_VERSION ); ?>
             </div>
         </div>
     </div>

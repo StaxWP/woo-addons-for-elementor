@@ -1,7 +1,7 @@
 {
-  "name": "stax-elementor",
+  "name": "stax-woo-for-elementor",
   "version": "1.0.0",
-  "description": "Awesome Elementor widgets",
+  "description": "Woocommerce Addons and Widgets for Elementor",
   "main": "index.js",
   "scripts": {
     "build-tw": "postcss assets/scss/admin.scss -o assets/css/admin.css",
@@ -9,11 +9,7 @@
     "build-scss": "gulp build:styles",
     "build-js": "gulp build:scripts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/sq-plugins/stax-elementor.git"
-  },
-  "author": "SeventhQueen",
+  "author": "StaxWP",
   "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/sq-plugins/stax-elementor/issues"

@@ -28,7 +28,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Product Images', 'stax-woo-for-elementor' );
+		return __( 'Product Images', 'stax-woo-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -44,7 +44,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_product_gallery_style',
 			[
-				'label' => __( 'Style', 'stax-woo-for-elementor' ),
+				'label' => __( 'Style', 'stax-woo-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -52,7 +52,7 @@ class Component extends Base {
 		$this->add_control(
 			'default_style',
 			[
-				'label'     => __( 'Default Style', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Default Style', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
@@ -65,7 +65,7 @@ class Component extends Base {
 			'wc_style_warning',
 			[
 				'type'            => Controls_Manager::RAW_HTML,
-				'raw'             => __( 'The style of this widget is often affected by your theme and plugins. If you experience any such issue, try to switch to a basic theme and deactivate related plugins.', 'stax-woo-for-elementor' ),
+				'raw'             => __( 'The style of this widget is often affected by your theme and plugins. If you experience any such issue, try to switch to a basic theme and deactivate related plugins.', 'stax-woo-addons-for-elementor' ),
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 			]
 		);
@@ -73,10 +73,10 @@ class Component extends Base {
 		$this->add_control(
 			'sale_flash',
 			[
-				'label'        => __( 'Sale Flash', 'stax-woo-for-elementor' ),
+				'label'        => __( 'Sale Flash', 'stax-woo-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'stax-woo-for-elementor' ),
-				'label_off'    => __( 'Hide', 'stax-woo-for-elementor' ),
+				'label_on'     => __( 'Show', 'stax-woo-addons-for-elementor' ),
+				'label_off'    => __( 'Hide', 'stax-woo-addons-for-elementor' ),
 				'render_type'  => 'template',
 				'return_value' => 'yes',
 				'default'      => 'yes',
@@ -97,7 +97,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'image_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -110,7 +110,7 @@ class Component extends Base {
 		$this->add_control(
 			'spacing',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -122,7 +122,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_thumbs_style',
 			[
-				'label'     => __( 'Thumbnails', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Thumbnails', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -139,7 +139,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'thumbs_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -151,7 +151,7 @@ class Component extends Base {
 		$this->add_control(
 			'spacing_thumbs',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [

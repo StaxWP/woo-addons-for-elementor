@@ -30,7 +30,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Products', 'stax-woo-for-elementor' );
+		return __( 'Products', 'stax-woo-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -45,14 +45,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Content', 'stax-woo-for-elementor' ),
+				'label' => __( 'Content', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label'               => __( 'Columns', 'stax-woo-for-elementor' ),
+				'label'               => __( 'Columns', 'stax-woo-addons-for-elementor' ),
 				'type'                => Controls_Manager::NUMBER,
 				'prefix_class'        => 'elementor-products-columns%s-',
 				'min'                 => 1,
@@ -78,7 +78,7 @@ class Component extends Base {
 		$this->add_control(
 			'rows',
 			[
-				'label'       => __( 'Rows', 'stax-woo-for-elementor' ),
+				'label'       => __( 'Rows', 'stax-woo-addons-for-elementor' ),
 				'type'        => Controls_Manager::NUMBER,
 				'default'     => ProductsRenderer::DEFAULT_COLUMNS_AND_ROWS,
 				'render_type' => 'template',
@@ -93,7 +93,7 @@ class Component extends Base {
 		$this->add_control(
 			'paginate',
 			[
-				'label'   => __( 'Pagination', 'stax-woo-for-elementor' ),
+				'label'   => __( 'Pagination', 'stax-woo-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => '',
 			]
@@ -102,7 +102,7 @@ class Component extends Base {
 		$this->add_control(
 			'allow_order',
 			[
-				'label'     => __( 'Allow Order', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Allow Order', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::SWITCHER,
 				'default'   => '',
 				'condition' => [
@@ -115,7 +115,7 @@ class Component extends Base {
 			'wc_notice_frontpage',
 			[
 				'type'            => Controls_Manager::RAW_HTML,
-				'raw'             => __( 'Ordering is not available if this widget is placed in your front page. Visible on frontend only.', 'stax-woo-for-elementor' ),
+				'raw'             => __( 'Ordering is not available if this widget is placed in your front page. Visible on frontend only.', 'stax-woo-addons-for-elementor' ),
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 				'condition'       => [
 					'paginate'    => 'yes',
@@ -127,7 +127,7 @@ class Component extends Base {
 		$this->add_control(
 			'show_result_count',
 			[
-				'label'     => __( 'Show Result Count', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Show Result Count', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::SWITCHER,
 				'default'   => '',
 				'condition' => [
@@ -141,7 +141,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_query',
 			[
-				'label' => __( 'Query', 'stax-woo-for-elementor' ),
+				'label' => __( 'Query', 'stax-woo-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -149,14 +149,14 @@ class Component extends Base {
 		$this->add_control(
 			'query_post_type',
 			[
-				'label'   => __( 'Source', 'stax-woo-for-elementor' ),
+				'label'   => __( 'Source', 'stax-woo-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'product',
 				'options' => [
-					'current_query' => __( 'Current Query', 'stax-woo-for-elementor' ),
-					'product'       => __( 'Latest Products', 'stax-woo-for-elementor' ),
-					'sale'          => __( 'Sale', 'stax-woo-for-elementor' ),
-					'featured'      => __( 'Featured', 'stax-woo-for-elementor' )
+					'current_query' => __( 'Current Query', 'stax-woo-addons-for-elementor' ),
+					'product'       => __( 'Latest Products', 'stax-woo-addons-for-elementor' ),
+					'sale'          => __( 'Sale', 'stax-woo-addons-for-elementor' ),
+					'featured'      => __( 'Featured', 'stax-woo-addons-for-elementor' )
 				],
 			]
 		);
@@ -164,7 +164,7 @@ class Component extends Base {
 		$this->add_control(
 			'query_offset',
 			[
-				'label'   => __( 'Offset', 'stax-woo-for-elementor' ),
+				'label'   => __( 'Offset', 'stax-woo-addons-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'min'     => 0,
 				'max'     => 100,
@@ -176,17 +176,17 @@ class Component extends Base {
 		$this->add_control(
 			'query_orderby',
 			[
-				'label'   => __( 'Order By', 'stax-woo-for-elementor' ),
+				'label'   => __( 'Order By', 'stax-woo-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'date',
 				'options' => [
-					'date'       => __( 'Date', 'stax-woo-for-elementor' ),
-					'title'      => __( 'Title', 'stax-woo-for-elementor' ),
-					'price'      => __( 'Price', 'stax-woo-for-elementor' ),
-					'popularity' => __( 'Popularity', 'stax-woo-for-elementor' ),
-					'rating'     => __( 'Rating', 'stax-woo-for-elementor' ),
-					'rand'       => __( 'Random', 'stax-woo-for-elementor' ),
-					'menu_order' => __( 'Menu Order', 'stax-woo-for-elementor' ),
+					'date'       => __( 'Date', 'stax-woo-addons-for-elementor' ),
+					'title'      => __( 'Title', 'stax-woo-addons-for-elementor' ),
+					'price'      => __( 'Price', 'stax-woo-addons-for-elementor' ),
+					'popularity' => __( 'Popularity', 'stax-woo-addons-for-elementor' ),
+					'rating'     => __( 'Rating', 'stax-woo-addons-for-elementor' ),
+					'rand'       => __( 'Random', 'stax-woo-addons-for-elementor' ),
+					'menu_order' => __( 'Menu Order', 'stax-woo-addons-for-elementor' ),
 				],
 			]
 		);
@@ -194,12 +194,12 @@ class Component extends Base {
 		$this->add_control(
 			'query_order',
 			[
-				'label'   => __( 'Order', 'stax-woo-for-elementor' ),
+				'label'   => __( 'Order', 'stax-woo-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'desc',
 				'options' => [
-					'asc'  => __( 'ASC', 'stax-woo-for-elementor' ),
-					'desc' => __( 'DESC', 'stax-woo-for-elementor' )
+					'asc'  => __( 'ASC', 'stax-woo-addons-for-elementor' ),
+					'desc' => __( 'DESC', 'stax-woo-addons-for-elementor' )
 				],
 			]
 		);
@@ -209,7 +209,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_products_style',
 			[
-				'label' => __( 'Products', 'stax-woo-for-elementor' ),
+				'label' => __( 'Products', 'stax-woo-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -218,7 +218,7 @@ class Component extends Base {
 			'wc_style_warning',
 			[
 				'type'            => Controls_Manager::RAW_HTML,
-				'raw'             => __( 'The style of this widget is often affected by your theme and plugins. If you experience any such issue, try to switch to a basic theme and deactivate related plugins.', 'stax-woo-for-elementor' ),
+				'raw'             => __( 'The style of this widget is often affected by your theme and plugins. If you experience any such issue, try to switch to a basic theme and deactivate related plugins.', 'stax-woo-addons-for-elementor' ),
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 			]
 		);
@@ -235,7 +235,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'column_gap',
 			[
-				'label'          => __( 'Columns Gap', 'stax-woo-for-elementor' ),
+				'label'          => __( 'Columns Gap', 'stax-woo-addons-for-elementor' ),
 				'type'           => Controls_Manager::SLIDER,
 				'default'        => [
 					'size' => 20,
@@ -261,7 +261,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'row_gap',
 			[
-				'label'          => __( 'Rows Gap', 'stax-woo-for-elementor' ),
+				'label'          => __( 'Rows Gap', 'stax-woo-addons-for-elementor' ),
 				'type'           => Controls_Manager::SLIDER,
 				'default'        => [
 					'size' => 40,
@@ -287,19 +287,19 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label'        => __( 'Alignment', 'stax-woo-for-elementor' ),
+				'label'        => __( 'Alignment', 'stax-woo-addons-for-elementor' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'left'   => [
-						'title' => __( 'Left', 'stax-woo-for-elementor' ),
+						'title' => __( 'Left', 'stax-woo-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'stax-woo-for-elementor' ),
+						'title' => __( 'Center', 'stax-woo-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-center',
 					],
 					'right'  => [
-						'title' => __( 'Right', 'stax-woo-for-elementor' ),
+						'title' => __( 'Right', 'stax-woo-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
 					],
 				],
@@ -313,7 +313,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_image_style',
 			[
-				'label'     => __( 'Image', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Image', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -323,7 +323,7 @@ class Component extends Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name'     => 'image_box_shadow',
-				'label'    => __( 'Box Shadow', 'stax-woo-for-elementor' ),
+				'label'    => __( 'Box Shadow', 'stax-woo-addons-for-elementor' ),
 				'selector' => '{{WRAPPER}}.elementor-wc-products .attachment-woocommerce_thumbnail',
 			]
 		);
@@ -339,7 +339,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'image_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -351,7 +351,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'image_spacing',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -363,7 +363,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label'     => __( 'Title', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Title', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -372,7 +372,7 @@ class Component extends Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .woocommerce-loop-product__title'  => 'color: {{VALUE}}',
@@ -394,7 +394,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'range'      => [
@@ -414,7 +414,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_rating_style',
 			[
-				'label'     => __( 'Rating', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Rating', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -423,7 +423,7 @@ class Component extends Base {
 		$this->add_control(
 			'star_color',
 			[
-				'label'     => __( 'Star Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Star Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .star-rating' => 'color: {{VALUE}}',
@@ -434,7 +434,7 @@ class Component extends Base {
 		$this->add_control(
 			'empty_star_color',
 			[
-				'label'     => __( 'Empty Star Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Empty Star Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .star-rating::before' => 'color: {{VALUE}}',
@@ -445,7 +445,7 @@ class Component extends Base {
 		$this->add_control(
 			'star_size',
 			[
-				'label'     => __( 'Star Size', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Star Size', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'default'   => [
 					'unit' => 'em',
@@ -466,7 +466,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'rating_spacing',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'range'      => [
@@ -485,7 +485,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_price_style',
 			[
-				'label'     => __( 'Price', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Price', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -494,7 +494,7 @@ class Component extends Base {
 		$this->add_control(
 			'price_color',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .price'             => 'color: {{VALUE}}',
@@ -515,7 +515,7 @@ class Component extends Base {
 		$this->add_control(
 			'price_margin',
 			[
-				'label'      => __( 'Margin', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Margin', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -527,7 +527,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_old_price_style',
 			[
-				'label'     => __( 'Regular Price', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Regular Price', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -536,7 +536,7 @@ class Component extends Base {
 		$this->add_control(
 			'old_price_color',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .price del'         => 'color: {{VALUE}}',
@@ -559,7 +559,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_button_style',
 			[
-				'label'     => __( 'Button', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Button', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -568,10 +568,10 @@ class Component extends Base {
 		$this->add_control(
 			'button_show',
 			[
-				'label'        => __( 'Show', 'stax-woo-for-elementor' ),
+				'label'        => __( 'Show', 'stax-woo-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'stax-woo-for-elementor' ),
-				'label_off'    => __( 'Hide', 'stax-woo-for-elementor' ),
+				'label_on'     => __( 'Show', 'stax-woo-addons-for-elementor' ),
+				'label_off'    => __( 'Hide', 'stax-woo-addons-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			]
@@ -580,7 +580,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_hidden_style',
 			[
-				'label'     => __( 'Button Hide', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Button Hide', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
@@ -601,14 +601,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'stax-woo-for-elementor' ),
+				'label' => __( 'Normal', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label'     => __( 'Text Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Text Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -620,7 +620,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_background_color',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .button' => 'background-color: {{VALUE}};',
@@ -631,7 +631,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_border_color',
 			[
-				'label'     => __( 'Border Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Border Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .button' => 'border-color: {{VALUE}};',
@@ -652,14 +652,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'stax-woo-for-elementor' ),
+				'label' => __( 'Hover', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'button_hover_color',
 			[
-				'label'     => __( 'Text Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Text Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .button:hover' => 'color: {{VALUE}};',
@@ -670,7 +670,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_hover_background_color',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .button:hover' => 'background-color: {{VALUE}};',
@@ -681,7 +681,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_hover_border_color',
 			[
-				'label'     => __( 'Border Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Border Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product .button:hover' => 'border-color: {{VALUE}};',
@@ -708,7 +708,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -723,7 +723,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_text_padding',
 			[
-				'label'      => __( 'Text Padding', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Text Padding', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -738,7 +738,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'button_spacing',
 			[
-				'label'      => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -753,7 +753,7 @@ class Component extends Base {
 		$this->add_control(
 			'heading_view_cart_style',
 			[
-				'label'     => __( 'View Cart', 'stax-woo-for-elementor' ),
+				'label'     => __( 'View Cart', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -762,7 +762,7 @@ class Component extends Base {
 		$this->add_control(
 			'view_cart_color',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products .added_to_cart' => 'color: {{VALUE}}',
@@ -783,7 +783,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_design_box',
 			[
-				'label' => __( 'Box', 'stax-woo-for-elementor' ),
+				'label' => __( 'Box', 'stax-woo-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -791,7 +791,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_border_width',
 			[
-				'label'      => __( 'Border Width', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Width', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range'      => [
@@ -809,7 +809,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range'      => [
@@ -827,7 +827,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label'      => __( 'Padding', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Padding', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em' ],
 				'range'      => [
@@ -846,7 +846,7 @@ class Component extends Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'stax-woo-for-elementor' ),
+				'label' => __( 'Normal', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
@@ -861,7 +861,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_bg_color',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product' => 'background-color: {{VALUE}}',
@@ -872,7 +872,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_border_color',
 			[
-				'label'     => __( 'Border Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Border Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product' => 'border-color: {{VALUE}}',
@@ -884,7 +884,7 @@ class Component extends Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'stax-woo-for-elementor' ),
+				'label' => __( 'Hover', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
@@ -899,7 +899,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_bg_color_hover',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product:hover' => 'background-color: {{VALUE}}',
@@ -910,7 +910,7 @@ class Component extends Base {
 		$this->add_control(
 			'box_border_color_hover',
 			[
-				'label'     => __( 'Border Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Border Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product:hover' => 'border-color: {{VALUE}}',
@@ -927,7 +927,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_pagination_style',
 			[
-				'label'     => __( 'Pagination', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Pagination', 'stax-woo-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'paginate' => 'yes',
@@ -938,7 +938,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_spacing',
 			[
-				'label'     => __( 'Spacing', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Spacing', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination' => 'margin-top: {{SIZE}}{{UNIT}}',
@@ -949,10 +949,10 @@ class Component extends Base {
 		$this->add_control(
 			'show_pagination_border',
 			[
-				'label'        => __( 'Border', 'stax-woo-for-elementor' ),
+				'label'        => __( 'Border', 'stax-woo-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_off'    => __( 'Hide', 'stax-woo-for-elementor' ),
-				'label_on'     => __( 'Show', 'stax-woo-for-elementor' ),
+				'label_off'    => __( 'Hide', 'stax-woo-addons-for-elementor' ),
+				'label_on'     => __( 'Show', 'stax-woo-addons-for-elementor' ),
 				'default'      => 'yes',
 				'return_value' => 'yes',
 				'prefix_class' => 'elementor-show-pagination-border-',
@@ -962,7 +962,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_border_color',
 			[
-				'label'     => __( 'Border Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Border Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul'    => 'border-color: {{VALUE}}',
@@ -977,7 +977,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_padding',
 			[
-				'label'      => __( 'Padding', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Padding', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'range'      => [
 					'em' => [
@@ -1005,14 +1005,14 @@ class Component extends Base {
 
 		$this->start_controls_tab( 'pagination_style_normal',
 			[
-				'label' => __( 'Normal', 'stax-woo-for-elementor' ),
+				'label' => __( 'Normal', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_link_color',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li a' => 'color: {{VALUE}}',
@@ -1023,7 +1023,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_link_bg_color',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li a' => 'background-color: {{VALUE}}',
@@ -1035,14 +1035,14 @@ class Component extends Base {
 
 		$this->start_controls_tab( 'pagination_style_hover',
 			[
-				'label' => __( 'Hover', 'stax-woo-for-elementor' ),
+				'label' => __( 'Hover', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_link_color_hover',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li a:hover' => 'color: {{VALUE}}',
@@ -1053,7 +1053,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_link_bg_color_hover',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li a:hover' => 'background-color: {{VALUE}}',
@@ -1065,14 +1065,14 @@ class Component extends Base {
 
 		$this->start_controls_tab( 'pagination_style_active',
 			[
-				'label' => __( 'Active', 'stax-woo-for-elementor' ),
+				'label' => __( 'Active', 'stax-woo-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'pagination_link_color_active',
 			[
-				'label'     => __( 'Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li span.current' => 'color: {{VALUE}}',
@@ -1083,7 +1083,7 @@ class Component extends Base {
 		$this->add_control(
 			'pagination_link_bg_color_active',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} nav.woocommerce-pagination ul li span.current' => 'background-color: {{VALUE}}',
@@ -1100,7 +1100,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'sale_flash_style',
 			[
-				'label' => __( 'Sale Flash', 'stax-woo-for-elementor' ),
+				'label' => __( 'Sale Flash', 'stax-woo-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1108,10 +1108,10 @@ class Component extends Base {
 		$this->add_control(
 			'show_onsale_flash',
 			[
-				'label'        => __( 'Sale Flash', 'stax-woo-for-elementor' ),
+				'label'        => __( 'Sale Flash', 'stax-woo-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_off'    => __( 'Hide', 'stax-woo-for-elementor' ),
-				'label_on'     => __( 'Show', 'stax-woo-for-elementor' ),
+				'label_off'    => __( 'Hide', 'stax-woo-addons-for-elementor' ),
+				'label_on'     => __( 'Show', 'stax-woo-addons-for-elementor' ),
 				'separator'    => 'before',
 				'default'      => 'yes',
 				'return_value' => 'yes',
@@ -1124,7 +1124,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_text_color',
 			[
-				'label'     => __( 'Text Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Text Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product span.onsale' => 'color: {{VALUE}}',
@@ -1138,7 +1138,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_text_background_color',
 			[
-				'label'     => __( 'Background Color', 'stax-woo-for-elementor' ),
+				'label'     => __( 'Background Color', 'stax-woo-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}}.elementor-wc-products ul.products li.product span.onsale' => 'background-color: {{VALUE}}',
@@ -1163,7 +1163,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Border Radius', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -1178,7 +1178,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_width',
 			[
-				'label'      => __( 'Width', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Width', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -1193,7 +1193,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_height',
 			[
-				'label'      => __( 'Height', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Height', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'selectors'  => [
@@ -1208,16 +1208,16 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_horizontal_position',
 			[
-				'label'                => __( 'Position', 'stax-woo-for-elementor' ),
+				'label'                => __( 'Position', 'stax-woo-addons-for-elementor' ),
 				'type'                 => Controls_Manager::CHOOSE,
 				'label_block'          => false,
 				'options'              => [
 					'left'  => [
-						'title' => __( 'Left', 'stax-woo-for-elementor' ),
+						'title' => __( 'Left', 'stax-woo-addons-for-elementor' ),
 						'icon'  => 'eicon-h-align-left',
 					],
 					'right' => [
-						'title' => __( 'Right', 'stax-woo-for-elementor' ),
+						'title' => __( 'Right', 'stax-woo-addons-for-elementor' ),
 						'icon'  => 'eicon-h-align-right',
 					],
 				],
@@ -1237,7 +1237,7 @@ class Component extends Base {
 		$this->add_control(
 			'onsale_distance',
 			[
-				'label'      => __( 'Distance', 'stax-woo-for-elementor' ),
+				'label'      => __( 'Distance', 'stax-woo-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'range'      => [

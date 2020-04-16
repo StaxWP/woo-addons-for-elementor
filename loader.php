@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'STAX_WOO_VERSION', '1.0.0' );
-define( 'STAX_WOO_DOMAIN', 'stax-woo-for-elementor' );
+define( 'STAX_WOO_DOMAIN', 'stax-woo-addons-for-elementor' );
 define( 'STAX_WOO_HOOK_PREFIX', 'stax_el_' );
 define( 'STAX_WOO_SLUG_PREFIX', 'stax-woocommerce-' );
 
@@ -35,7 +35,7 @@ define( 'STAX_WOO_ASSETS_URL', STAX_WOO_URL . 'assets/' );
  * Localization
  */
 function stax_woocommerce_load_plugin_textdomain() {
-	load_plugin_textdomain( 'stax-woo-for-elementor', false, basename( __DIR__ ) . '/languages/' );
+	load_plugin_textdomain( 'stax-woo-addons-for-elementor', false, basename( __DIR__ ) . '/languages/' );
 }
 
 add_action( 'plugins_loaded', 'stax_woocommerce_load_plugin_textdomain' );
