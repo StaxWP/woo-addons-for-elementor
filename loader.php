@@ -7,7 +7,7 @@
  * Version: 1.0.0
  * Author URI: https://staxwp.com
  *
- * Text Domain: stax-woo-for-elementor
+ * Text Domain: stax-woo-addons-for-elementor
  * Domain Path: /languages
  */
 
