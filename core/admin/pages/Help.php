@@ -33,7 +33,7 @@ class Help extends Base {
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Help', STAX_WOO_DOMAIN ),
+			'name'     => __( 'Help', 'stax-woo-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 6
 		];

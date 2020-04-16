@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Elementor WooCommerce - Stax
- * Description:
- * Plugin URI: https://staxbuilder.com
+ * Plugin Name: Stax Woo Addons for Elementor
+ * Description: Woocommerce Addons and Widgets for Elementor builder
+ * Plugin URI: https://staxwp.com/elementor/woocommerce-addons-widgets/
  * Author: StaxWP
  * Version: 1.0.0
  * Author URI: https://staxwp.com
  *
- * Text Domain: stax-woocommerce-for-elementor
+ * Text Domain: stax-woo-for-elementor
  * Domain Path: /languages
  */
 
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'STAX_WOO_VERSION', '1.0.0' );
-define( 'STAX_WOO_DOMAIN', 'stax-woocommerce-for-elementor' );
+define( 'STAX_WOO_DOMAIN', 'stax-woo-for-elementor' );
 define( 'STAX_WOO_HOOK_PREFIX', 'stax_woocommerce_' );
 define( 'STAX_WOO_SLUG_PREFIX', 'stax-woocommerce-' );
 
@@ -35,7 +35,7 @@ define( 'STAX_WOO_ASSETS_URL', STAX_WOO_URL . 'assets/' );
  * Localization
  */
 function stax_woocommerce_load_plugin_textdomain() {
-	load_plugin_textdomain( STAX_WOO_DOMAIN, false, basename( __DIR__ ) . '/languages/' );
+	load_plugin_textdomain( 'stax-woo-for-elementor', false, basename( __DIR__ ) . '/languages/' );
 }
 
 add_action( 'plugins_loaded', 'stax_woocommerce_load_plugin_textdomain' );
