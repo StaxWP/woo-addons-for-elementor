@@ -18,7 +18,7 @@
                 </div>
 			<?php endforeach; ?>
         </div>
-        <input type="hidden" name="action" value="stax_widget_activation">
+        <input type="hidden" name="action" value="stax_woo_widget_activation">
 
         <div class="ste-mt-5">
             <button type="submit"

@@ -25,11 +25,11 @@ class Widgets extends Base {
 		}
 
 		add_filter( STAX_WOO_HOOK_PREFIX . 'admin_menu', [ $this, 'add_menu_item' ] );
-		add_action( 'admin_post_stax_widget_activation', [ $this, 'toggle_widget' ] );
+		add_action( 'admin_post_stax_woo_widget_activation', [ $this, 'toggle_widget' ] );
 	}
 
 	public function toggle_widget() {
-		if ( ! isset( $_POST['action'] ) || $_POST['action'] !== 'stax_widget_activation' ) {
+		if ( ! isset( $_POST['action'] ) || $_POST['action'] !== 'stax_woo_widget_activation' ) {
 			wp_redirect( admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ) );
 		}
 
