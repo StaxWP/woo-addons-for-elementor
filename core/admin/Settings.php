@@ -198,7 +198,7 @@ class Settings {
 			?>
             <div class="notice notice-warning is-dismissible">
                 <p>
-					<?php wp_kses_post( printf(
+					<?php echo wp_kses_post( sprintf(
 						__( 'Woo Addons for Elementor - Stax requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.' ),
 						'https://wordpress.org/plugins/woocommerce/' ) ); ?>
                 </p>

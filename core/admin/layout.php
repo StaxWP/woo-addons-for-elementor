@@ -11,7 +11,7 @@
 
                 <div class="ste-text-right">
                     <h1 class="ste-block ste-leading-normal ste-my-0"><span class="ste-font-light">Welcome to</span> STAX</h1>
-                    <div class="ste-font-medium ste-text-lg ste-text-gray-600"><?php esc_html__( 'Woo Addons for Elementor', 'stax-woo-addons-for-elementor' ) ;?></div>
+                    <div class="ste-font-medium ste-text-lg ste-text-gray-600"><?php esc_html_e( 'Woocommerce Addons for Elementor', 'stax-woo-addons-for-elementor' ) ;?></div>
                 </div>
             </div>
         </div>
