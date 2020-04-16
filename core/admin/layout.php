@@ -48,7 +48,7 @@
     <div class="ste-container ste-mx-auto ste-my-10">
         <div class="ste-flex ste-justify-center">
             <div class="ste-text-gray-400 ste-text-sm ste-font-medium ste-uppercase">
-		        <?php printf( __( 'Version %s', STAX_WOO_DOMAIN ), STAX_WOO_VERSION ); ?>
+		        <?php printf( __( 'Version %s', 'stax-woo-for-elementor' ), STAX_WOO_VERSION ); ?>
             </div>
         </div>
     </div>

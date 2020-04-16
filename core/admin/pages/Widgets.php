@@ -66,7 +66,7 @@ class Widgets extends Base {
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Widgets', STAX_WOO_DOMAIN ),
+			'name'     => __( 'Widgets', 'stax-woo-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 2
 		];

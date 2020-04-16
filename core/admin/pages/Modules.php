@@ -35,7 +35,7 @@ class Modules extends Base {
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Modules', STAX_WOO_DOMAIN ),
+			'name'     => __( 'Modules', 'stax-woo-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 5
 		];
