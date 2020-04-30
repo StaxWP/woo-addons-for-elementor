@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Stax Woo Addons for Elementor
- * Description: Woocommerce Addons and Widgets for Elementor builder
+ * Plugin Name: Woo Addons for Elementor - Stax
+ * Description: WooCommerce Addons and Widgets for Elementor builder
  * Plugin URI: https://staxwp.com/elementor/woocommerce-addons-widgets/
  * Author: StaxWP
  * Version: 1.0.0
