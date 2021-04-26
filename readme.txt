@@ -1,10 +1,10 @@
-=== Stax Addons for Elementor ===
+=== Woo Addons for Elementor - Stax ===
 Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor, woocommerce, elementor woocommerce, woocommerce widgets, woo addons
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4.0
-Stable tag: 1.3.0
+Stable tag: 1.0.0
 License: GLPv2 or later
 
 Functional Woocommerce add-ons for Elementor. Enhance your site building experience with Stax WooCommerce Addons
