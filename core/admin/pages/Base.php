@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Class Base
+ *
  * @package StaxWoocommerce
  */
 class Base {
@@ -29,7 +30,7 @@ class Base {
 		$class = static::class;
 
 		if ( ! isset( self::$instances[ $class ] ) ) {
-			self::$instances[ $class ] = new $class;
+			self::$instances[ $class ] = new $class();
 		}
 
 		return self::$instances[ $class ];

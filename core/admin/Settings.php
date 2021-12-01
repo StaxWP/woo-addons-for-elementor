@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Class Settings
+ *
  * @package StaxWoocommerce
  */
 class Settings {
@@ -58,52 +59,6 @@ class Settings {
 			'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDE1MzYiPjxkZWZzPjxzdHlsZT4uYXtmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5icDwvdGl0bGU+PHBhdGggY2xhc3M9ImEiIGQ9Ik04MTUuMTQsMjgwLjU0Yy0xMS0xMS42OS0yNy42My0xOC40LTQ1LjUxLTE4LjRhNzAuNTksNzAuNTksMCwwLDAtMzYuNzUsMTAuMTdMNTEyLDQwNi44OGMtMTQuNzQsOS0yNC4zNywyMi44OS0yNi40MiwzOC4xOC0xLjg4LDE0LDIuNjMsMjcuNjEsMTIuNjksMzguMjcsMTEuMzcsMTIsMjguMjksMTguMzEsNDUuNjcsMTguMzFhNzAuNTIsNzAuNTIsMCwwLDAsMzYuNTgtMTAuMDloMEw4MDEuNDEsMzU3YzE0Ljc0LTksMjQuMzYtMjIuODksMjYuNDEtMzguMThDODI5LjcxLDMwNC43OCw4MjUuMiwyOTEuMTksODE1LjE0LDI4MC41NFoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTExNDIuMzMsNjAyLjI0YTcwLjM0LDcwLjM0LDAsMCwwLTk3LjQyLTI2LjM3TDc3Myw3MzcuNjYsNTAxLjA3LDU3NS44OGE3MC4zLDcwLjMsMCwwLDAtOTcuNDIsMjYuMzYsNzEuNzUsNzEuNzUsMCwwLDAtNi44Nyw1My4yN0E3MC45Miw3MC45MiwwLDAsMCw0MjkuMyw2OTlsMjczLDE2Mi40MXYzMjUuNDJjMCwzOS40LDMxLjcyLDcxLjQ0LDcwLjcxLDcxLjQ0czcwLjcxLTMyLDcwLjcxLTcxLjQ0Vjg2MS40MWwyNzMtMTYyLjQxYTcwLjksNzAuOSwwLDAsMCwzMi41My00My40OUE3MS43NCw3MS43NCwwLDAsMCwxMTQyLjMzLDYwMi4yNFoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTEzNjguNTMsNzIzLjUyYTgwLDgwLDAsMCwwLDc5LjktODBWNDU2LjhhMTQzLDE0MywwLDAsMC03MS4xOC0xMjMuNDlsLTUzOC0zMTEuMTlhMTQyLjUzLDE0Mi41MywwLDAsMC0xNDIuNTEsMGwtNTM4LDMxMS4xOUExNDMuMDYsMTQzLjA2LDAsMCwwLDg3LjU3LDQ1Ni44djYyMi4zOWExNDMsMTQzLDAsMCwwLDcxLjE4LDEyMy40OWw1MzgsMzExLjJhMTQyLjY0LDE0Mi42NCwwLDAsMCwxNDIuNSwwbDUzOC0zMTEuMTloMGExNDMsMTQzLDAsMCwwLDcxLjE4LTEyMy40OVY4ODUuMjhhNzkuOTEsNzkuOTEsMCwxLDAtMTU5LjgxLDB2MTg0TDc2OCwxMzcwLjM3LDI0Ny4zOCwxMDY5LjIzVjQ2Ni43OEw3NjgsMTY1LjY0bDUyMC42MiwzMDEuMTRWNjQzLjU1QTgwLDgwLDAsMCwwLDEzNjguNTMsNzIzLjUyWiIvPjwvc3ZnPg==',
 			'58.7'
 		);
-
-		/*add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Widgets', 'stax-woo-addons-for-elementor' ),
-			__( 'Widgets', 'stax-woo-addons-for-elementor' ),
-			'manage_options',
-			'stax-woocommerce-elementor-widgets',
-			[ $this, 'settings_template' ]
-		);
-
-		add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Plugins', 'stax-woo-addons-for-elementor' ),
-			__( 'Plugins', 'stax-woo-addons-for-elementor' ),
-			'manage_options',
-			'stax-woocommerce-elementor-plugins',
-			[ $this, 'settings_template' ]
-		);
-
-		add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Templates', 'stax-woo-addons-for-elementor' ),
-			__( 'Templates', 'stax-woo-addons-for-elementor' ),
-			'manage_options',
-			'stax-woocommerce-elementor-templates',
-			[ $this, 'settings_template' ]
-		);
-
-		add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Modules', 'stax-woo-addons-for-elementor' ),
-			__( 'Modules', 'stax-woo-addons-for-elementor' ),
-			'manage_options',
-			'stax-woocommerce-elementor-modules',
-			[ $this, 'settings_template' ]
-		);
-
-		add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Woocommerce Elementor - Help', 'stax-woo-addons-for-elementor' ),
-			__( 'Help', 'stax-woo-addons-for-elementor' ),
-			'manage_options',
-			'stax-woocommerce-elementor-help',
-			[ $this, 'settings_template' ]
-		);*/
-
 	}
 
 	/**
@@ -125,8 +80,8 @@ class Settings {
 	 * @return string
 	 */
 	public function add_admin_body_class( $classes ) {
-		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-woocommerce-elementor' ) !== false ) {
-			$classes .= ' stax-elementor-admin-page';
+		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-woocommerce' ) !== false ) {
+			$classes .= ' stax-woo-admin-page';
 		}
 
 		return $classes;
@@ -142,17 +97,23 @@ class Settings {
 		$has_pro       = '#';
 
 		if ( ! empty( $menu ) ) {
-			usort( $menu, static function ( $a, $b ) {
-				return $a['priority'] - $b['priority'];
-			} );
+			usort(
+				$menu,
+				static function ( $a, $b ) {
+					return $a['priority'] - $b['priority'];
+				}
+			);
 		}
 
-		Utils::load_template( 'core/admin/layout', [
-			'site_url'      => $site_url,
-			'wrapper_class' => $wrapper_class,
-			'menu'          => $menu,
-			'has_pro'       => $has_pro
-		] );
+		Utils::load_template(
+			'core/admin/layout',
+			[
+				'site_url'      => $site_url,
+				'wrapper_class' => $wrapper_class,
+				'menu'          => $menu,
+				'has_pro'       => $has_pro,
+			]
+		);
 	}
 
 	/**
@@ -161,16 +122,18 @@ class Settings {
 	public function main_panel() {
 		$current_slug = apply_filters( STAX_WOO_HOOK_PREFIX . 'current_slug', $this->current_slug );
 
-		Utils::load_template( 'core/admin/actions', [
-			'current_slug' => $current_slug
-		] );
+		Utils::load_template(
+			'core/admin/actions',
+			[
+				'current_slug' => $current_slug,
+			]
+		);
 	}
 
 	/**
 	 * Load scripts & styles
 	 */
 	public function admin_scripts() {
-
 		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_WOO_SLUG_PREFIX ) !== false ) {
 			wp_register_style(
 				'stax-addons-tw',
@@ -196,13 +159,18 @@ class Settings {
 	public function woocommerce_not_installed_notice() {
 		if ( ! Utils::woocommerce_is_active() ) {
 			?>
-            <div class="notice notice-warning is-dismissible">
-                <p>
-					<?php echo wp_kses_post( sprintf(
-						__( 'Woo Addons for Elementor - Stax requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.' ),
-						'https://wordpress.org/plugins/woocommerce/' ) ); ?>
-                </p>
-            </div>
+			<div class="notice notice-warning is-dismissible">
+				<p>
+					<?php
+					echo wp_kses_post(
+						sprintf(
+							__( 'Woo Addons for Elementor - Stax requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.' ),
+							'https://wordpress.org/plugins/woocommerce/'
+						)
+					);
+					?>
+				</p>
+			</div>
 			<?php
 		}
 	}
