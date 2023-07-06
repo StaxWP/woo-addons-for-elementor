@@ -43,5 +43,28 @@ function stax_woocommerce_load_plugin_textdomain() {
 
 add_action( 'plugins_loaded', 'stax_woocommerce_load_plugin_textdomain' );
 
+
+require __DIR__ . '/vendor/autoload.php';
+
 // Init plugin
 require_once STAX_WOO_CORE_PATH . 'Plugin.php';
+
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function appsero_init_tracker_stax_woo_addons_for_elementor() {
+
+	if ( ! class_exists( 'Appsero\Client' ) ) {
+		require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
+	}
+
+	$client = new Appsero\Client( '80b48872-f803-4f38-888d-dbd72eee1c54', 'Woo Addons for Elementor &#8211; Stax', __FILE__ );
+
+	// Active insights
+	$client->insights()->init();
+
+}
+
+appsero_init_tracker_stax_woo_addons_for_elementor();

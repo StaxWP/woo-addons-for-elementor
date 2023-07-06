@@ -3,7 +3,7 @@ Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor, woocommerce, elementor woocommerce, woocommerce widgets, woo addons
 Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 6.20
+Tested up to: 6.2
 Stable tag: 1.1.0
 License: GLPv2 or later
 
@@ -20,6 +20,8 @@ Current Elementor add-on widgets:
 
 Many more elements and options coming soon...
 
+Woo Addons for Elementor &#8211; Stax uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
 == Installation ==
 
 1. Upload the plugin to your 'wp-content/plugins' directory
@@ -34,6 +36,10 @@ Many more elements and options coming soon...
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+
+= 1.1.0 =
+* Integrate Appsero and add extra security checks
 
 = 1.0.0 =
 * Initial release
