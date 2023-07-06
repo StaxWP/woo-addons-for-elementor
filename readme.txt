@@ -1,18 +1,18 @@
 === Woo Addons for Elementor - Stax ===
-Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
+Contributors: staxwp, codezz, geowrge, rtynio
 Tags: elementor, woocommerce, elementor woocommerce, woocommerce widgets, woo addons
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 6.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GLPv2 or later
 
-Functional Woocommerce add-ons for Elementor. Enhance your site building experience with Stax WooCommerce Addons
+Functional Woocommerce add-ons for Elementor. Enhance your site building experience with Stax WooCommerce Addons.
 
 == Description ==
-Stax Woocommerce Addons is a very fast and lightweight plugin that adds new Woocommerce widgets and enhancements to existing Elementor.
+Stax WooCommerce Addons is a very fast and lightweight plugin that adds new Woocommerce widgets and enhancements to existing Elementor.
 We use a super modular approach so any CSS or Javascript for a module is added to the page only if you use that widget.
-Also you can enable just the modules you want to see and use in the Elementor interface.
+You can enable just the modules you want to see and use in the Elementor interface.
 
 Current Elementor add-on widgets:
 - **Woocommerce Product List** - Showcase Woocommerce products with lots of extra options
@@ -20,7 +20,7 @@ Current Elementor add-on widgets:
 
 Many more elements and options coming soon...
 
-Woo Addons for Elementor &#8211; Stax uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+Woo Addons for Elementor uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
 == Installation ==
 
