@@ -68,12 +68,6 @@ Yes. This plugin extends WooCommerce with Elementor widgets, so both WooCommerce
 
 Absolutely. The plugin is designed to be lightweight and conflict-free. It works alongside other Elementor addon plugins without issues.
 
-== Screenshots ==
-
-1. Product Grid widget — showcase WooCommerce products with custom layouts
-2. Product Images widget — display product gallery on single product pages
-3. Widget settings panel — modular control over which widgets are active
-
 == Changelog ==
 
 = 1.2.0 =
