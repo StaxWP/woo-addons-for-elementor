@@ -1,6 +1,6 @@
 === Stax Addons for WooCommerce and Elementor ===
 Contributors: staxwp, codezz, geowrge, rtynio
-Tags: elementor addons, woocommerce widgets, product widgets, stax, elementor woocommerce
+Tags: woocommerce elementor, product grid, woocommerce widgets, elementor addons, product gallery
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.7
@@ -8,33 +8,71 @@ Stable tag: 1.2.0
 Requires Plugins: elementor, woocommerce
 License: GPLv2 or later
 
-Functional WooCommerce add-ons for Elementor. Enhance your site building experience with Stax WooCommerce Addons.
+Lightweight WooCommerce widgets for Elementor – product grids, product image galleries, and more. Fast, modular, and easy to use.
 
 == Description ==
-Stax Addons for WooCommerce and Elementor is a very fast and lightweight plugin that adds new WooCommerce widgets and enhancements to Elementor.
-We use a super modular approach so any CSS or Javascript for a module is added to the page only if you use that widget.
-You can enable just the modules you want to see and use in the Elementor interface.
 
-Current Elementor add-on widgets:
-- **Woocommerce Product List** - Showcase Woocommerce products with lots of extra options
-- **Woocommerce Product Images** -Show Woocommerce product images on single product page.
+**Stax Addons for WooCommerce and Elementor** gives you powerful WooCommerce widgets inside the Elementor page builder. Display products, product images, and more — without bloating your site.
 
-Many more elements and options coming soon...
+= Why Stax? =
 
-Stax Addons for WooCommerce and Elementor uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+* **Lightweight & Fast** — Assets (CSS & JS) are loaded only when a widget is actually used on the page. No unnecessary bloat.
+* **Modular** — Enable only the widgets you need from the settings panel. Keep your Elementor editor clean and fast.
+* **Easy to Use** — Drag, drop, and customize. No coding required.
+
+= WooCommerce Widgets for Elementor =
+
+* **Product Grid / Product List** — Showcase your WooCommerce products with advanced layout options, custom columns, sorting, and filtering. Perfect for shop pages, landing pages, and product showcases.
+* **Product Images Gallery** — Display WooCommerce product images on single product pages with a clean, customizable gallery layout.
+
+= Who Is This For? =
+
+* WooCommerce store owners who use Elementor to build their pages
+* Designers and developers who want lightweight WooCommerce widgets without heavy multipurpose plugins
+* Anyone looking to create custom product displays beyond the default WooCommerce layout
+
+= Performance First =
+
+Unlike heavy "all-in-one" addons that load dozens of scripts on every page, Stax only loads assets for widgets you actually use. Your PageSpeed score stays high.
+
+= Third-Party Services =
+
+This plugin uses [Appsero](https://appsero.com/) SDK to collect optional, anonymized telemetry data upon user confirmation. This helps us troubleshoot issues faster and improve the plugin. See the [Appsero Privacy Policy](https://appsero.com/privacy-policy/).
 
 == Installation ==
 
-1. Upload the plugin to your 'wp-content/plugins' directory
-2. Activate the plugin from Plugins page
-3. Edit a page using Elementor
-4. See the new elements on the Elementor left panel
+1. Make sure **WooCommerce** and **Elementor** are installed and active.
+2. Upload the plugin to your `wp-content/plugins` directory, or install it directly from the WordPress plugin directory.
+3. Activate the plugin from the Plugins page.
+4. Edit any page with Elementor — you'll find the new WooCommerce widgets in the Elementor panel under the "Stax" category.
 
 == Frequently Asked Questions ==
 
-= Where can I find the new Elementor widgets =
+= Where can I find the Stax WooCommerce widgets in Elementor? =
 
-When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
+Open any page with Elementor, and look for the **Stax** category in the widget panel on the left side. All WooCommerce widgets from this plugin are grouped there.
+
+= Will this slow down my site? =
+
+No. The plugin only loads CSS and JavaScript for widgets that are actively used on the page. If a widget isn't on the page, its assets are not loaded at all.
+
+= Does this work with the free version of Elementor? =
+
+Yes. Stax Addons for WooCommerce and Elementor works with both the free and Pro versions of Elementor.
+
+= Is WooCommerce required? =
+
+Yes. This plugin extends WooCommerce with Elementor widgets, so both WooCommerce and Elementor must be installed and active.
+
+= Can I use this alongside other Elementor addons? =
+
+Absolutely. The plugin is designed to be lightweight and conflict-free. It works alongside other Elementor addon plugins without issues.
+
+== Screenshots ==
+
+1. Product Grid widget — showcase WooCommerce products with custom layouts
+2. Product Images widget — display product gallery on single product pages
+3. Widget settings panel — modular control over which widgets are active
 
 == Changelog ==
 
@@ -44,7 +82,7 @@ When editing a page with Elementor you will see the New elements added at the en
 * Removed load_plugin_textdomain (handled by WordPress.org since WP 4.6)
 * Fixed missing text domain in translation strings
 * Added direct file access protection to template files
-* Updated Appsero SDK
+* Updated Appsero SDK to v2.0
 * Added composer.json
 * Bumped minimum PHP to 7.0
 
