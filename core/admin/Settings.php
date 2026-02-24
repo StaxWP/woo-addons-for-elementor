@@ -164,7 +164,7 @@ class Settings {
 					<?php
 					echo wp_kses_post(
 						sprintf(
-							__( 'Woo Addons for Elementor - Stax requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.' ),
+							__( 'Stax Addons for WooCommerce and Elementor requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.', 'stax-woo-addons-for-elementor' ),
 							'https://wordpress.org/plugins/woocommerce/'
 						)
 					);

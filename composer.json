@@ -1,0 +1,21 @@
+{
+    "name": "staxwp/stax-woo-addons-for-elementor",
+    "description": "WooCommerce Addons and Widgets for Elementor builder",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "StaxWP",
+            "homepage": "https://staxwp.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "appsero/client": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StaxWoocommerce\\": "core/"
+        }
+    }
+}

@@ -7,21 +7,35 @@ namespace Composer\Autoload;
 class ComposerStaticInitb734838c97462b3b224bb514c7096d9c
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'S' =>
+        array (
+            'StaxWoocommerce\\' => 16,
+        ),
+        'A' =>
         array (
             'Appsero\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Appsero\\' => 
+        'StaxWoocommerce\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/core',
+        ),
+        'Appsero\\' =>
         array (
             0 => __DIR__ . '/..' . '/appsero/client/src',
         ),
     );
 
     public static $classMap = array (
+        'Appsero\\Client' => __DIR__ . '/..' . '/appsero/client/src/Client.php',
+        'Appsero\\Insights' => __DIR__ . '/..' . '/appsero/client/src/Insights.php',
+        'Appsero\\License' => __DIR__ . '/..' . '/appsero/client/src/License.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'StaxWoocommerce\\Plugin' => __DIR__ . '/../..' . '/core/Plugin.php',
+        'StaxWoocommerce\\StaxWidgets' => __DIR__ . '/../..' . '/core/StaxWidgets.php',
+        'StaxWoocommerce\\Utils' => __DIR__ . '/../..' . '/core/Utils.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

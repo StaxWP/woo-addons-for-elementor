@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'StaxWoocommerce\\' => array($baseDir . '/core'),
     'Appsero\\' => array($vendorDir . '/appsero/client/src'),
 );
