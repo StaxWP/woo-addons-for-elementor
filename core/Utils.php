@@ -170,10 +170,11 @@ class Utils {
 		ob_start();
 		include( STAX_WOO_PATH . trim( $name ) . '.php' );
 
+		$output = ob_get_clean();
 		if ( $echo ) {
-			echo ob_get_clean();
+			echo wp_kses_post( $output );
 		} else {
-			return ob_get_clean();
+			return $output;
 		}
 	}
 

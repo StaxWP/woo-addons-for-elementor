@@ -99,7 +99,7 @@ class ProductsRenderer extends \WC_Shortcode_Products {
 		$this->set_exclude_query_args( $query_args );
 
 		if ( 'yes' === $settings['paginate'] ) {
-			$page = absint( empty( $_GET['product-page'] ) ? 1 : $_GET['product-page'] );
+			$page = absint( empty( $_GET['product-page'] ) ? 1 : sanitize_text_field( wp_unslash( $_GET['product-page'] ) ) );
 
 			if ( 1 < $page ) {
 				$query_args['paged'] = $page;

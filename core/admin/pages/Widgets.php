@@ -36,12 +36,12 @@ class Widgets extends Base {
 			$is_safe = false;
 		}
 
-		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'stax_woo_widget_activation' ) ) {
+		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'stax_woo_widget_activation' ) ) {
 			$is_safe = false;
 		}
 
 		if ( ! $is_safe ) {
-			wp_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
+			wp_safe_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
 			exit;
 		}
 
@@ -52,7 +52,7 @@ class Widgets extends Base {
 		foreach ( $widgets as $widget ) {
 			$valid = false;
 
-			if ( isset( $_POST[ $widget['slug'] ] ) ) {
+			if ( isset( $_POST[ $widget['slug'] ] ) && sanitize_text_field( wp_unslash( $_POST[ $widget['slug'] ] ) ) ) {
 				$valid = true;
 			}
 
@@ -63,7 +63,7 @@ class Widgets extends Base {
 
 		update_option( '_stax_woocommerce_disabled_widgets', $options );
 
-		wp_redirect( admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ) );
+		wp_safe_redirect( admin_url( 'admin.php?page=' . STAX_WOO_SLUG_PREFIX . $this->current_slug ) );
 		exit();
 	}
 

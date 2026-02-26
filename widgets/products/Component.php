@@ -1291,7 +1291,7 @@ class Component extends Base {
 		$content = $shortcode->get_content();
 
 		if ( $content ) {
-			echo $content;
+			echo wp_kses_post( $content );
 		} elseif ( $this->get_settings( 'nothing_found_message' ) ) {
 			echo '<div class="elementor-nothing-found elementor-products-nothing-found">' . esc_html( $this->get_settings( 'nothing_found_message' ) ) . '</div>';
 		}

@@ -4,9 +4,10 @@ Tags: woocommerce widgets, product grid, product gallery, elementor addons, wooc
 Requires at least: 5.0
 Requires PHP: 7.4
 Tested up to: 6.9
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires Plugins: elementor, woocommerce
-License: GPLv2 or later
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Lightweight WooCommerce widgets for Elementor — product grids, image galleries, and more. Fast, modular, zero bloat.
 

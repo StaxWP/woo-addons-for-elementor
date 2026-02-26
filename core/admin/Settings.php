@@ -80,7 +80,7 @@ class Settings {
 	 * @return string
 	 */
 	public function add_admin_body_class( $classes ) {
-		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-woocommerce' ) !== false ) {
+		if ( isset( $_GET['page'] ) && strpos( sanitize_text_field( wp_unslash( $_GET['page'] ) ), 'stax-woocommerce' ) !== false ) {
 			$classes .= ' stax-woo-admin-page';
 		}
 
@@ -134,7 +134,7 @@ class Settings {
 	 * Load scripts & styles
 	 */
 	public function admin_scripts() {
-		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_WOO_SLUG_PREFIX ) !== false ) {
+		if ( isset( $_GET['page'] ) && strpos( sanitize_text_field( wp_unslash( $_GET['page'] ) ), STAX_WOO_SLUG_PREFIX ) !== false ) {
 			wp_register_style(
 				'stax-addons-tw',
 				STAX_WOO_ASSETS_URL . 'css/admin.min.css',
@@ -164,6 +164,7 @@ class Settings {
 					<?php
 					echo wp_kses_post(
 						sprintf(
+							/* translators: %s: WooCommerce plugin URL */
 							__( 'Stax Addons for WooCommerce and Elementor requires WooCommerce. Please install and activate <a href="%s" target="_blank">WooCommerce</a> in order to use our Elementor Widgets.', 'stax-woo-addons-for-elementor' ),
 							'https://wordpress.org/plugins/woocommerce/'
 						)

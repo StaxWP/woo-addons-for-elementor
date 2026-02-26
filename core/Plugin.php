@@ -63,7 +63,7 @@ class Plugin {
 	public function is_current_page( $page ) {
 		$page = STAX_WOO_SLUG_PREFIX . $page;
 
-		return isset( $_GET['page'] ) && $_GET['page'] === $page;
+		return isset( $_GET['page'] ) && sanitize_text_field( wp_unslash( $_GET['page'] ) ) === $page;
 	}
 
 }

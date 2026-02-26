@@ -27,7 +27,10 @@
 	<div class="ste-container ste-mx-auto ste-my-10">
 		<div class="ste-flex ste-justify-center">
 			<div class="ste-text-gray-400 ste-text-sm ste-font-medium ste-uppercase">
-				<?php printf( esc_html__( 'Version %s', 'stax-woo-addons-for-elementor' ), STAX_WOO_VERSION ); ?>
+				<?php
+				/* translators: %s: Plugin version number */
+				printf( esc_html__( 'Version %s', 'stax-woo-addons-for-elementor' ), esc_html( STAX_WOO_VERSION ) );
+			?>
 			</div>
 		</div>
 	</div>
