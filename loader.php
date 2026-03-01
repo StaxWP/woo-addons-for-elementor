@@ -8,8 +8,8 @@
  * Author URI: https://staxwp.com
  * Requires Plugins: elementor, woocommerce
  *
- * Elementor tested up to: 3.14.1
- * Elementor Pro tested up to: 3.14.1
+ * Elementor tested up to: 3.35
+ * Elementor Pro tested up to: 3.35
  *
  * License: GPL-3.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
