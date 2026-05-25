@@ -3,7 +3,7 @@ Contributors: staxwp, codezz, geowrge, rtynio
 Tags: woocommerce widgets, product grid, product gallery, elementor addons, woocommerce elementor
 Requires at least: 5.0
 Requires PHP: 7.4
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 1.2.2
 Requires Plugins: elementor, woocommerce
 License: GPLv3 or later
