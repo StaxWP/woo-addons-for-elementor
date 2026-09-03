@@ -4,12 +4,12 @@
  * Description: WooCommerce Addons and Widgets for Elementor builder
  * Plugin URI: https://staxwp.com/elementor/woocommerce-addons-widgets/
  * Author: StaxWP
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author URI: https://staxwp.com
  * Requires Plugins: elementor, woocommerce
  *
- * Elementor tested up to: 3.35
- * Elementor Pro tested up to: 3.35
+ * Elementor tested up to: 4.2.4
+ * Elementor Pro tested up to: 4.2.4
  *
  * License: GPL-3.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_WOO_VERSION', '1.2.2' );
+define( 'STAX_WOO_VERSION', '1.2.3' );
 define( 'STAX_WOO_DOMAIN', 'stax-woo-addons-for-elementor' );
 define( 'STAX_WOO_HOOK_PREFIX', 'stax_woocommerce_' );
 define( 'STAX_WOO_SLUG_PREFIX', 'stax-woocommerce-' );

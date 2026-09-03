@@ -3,8 +3,8 @@ Contributors: staxwp, codezz, geowrge, rtynio
 Tags: woocommerce widgets, product grid, product gallery, elementor addons, woocommerce elementor
 Requires at least: 5.0
 Requires PHP: 7.4
-Tested up to: 7.0
-Stable tag: 1.2.2
+Tested up to: 7.1
+Stable tag: 1.2.3
 Requires Plugins: elementor, woocommerce
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -81,6 +81,12 @@ Yes. Go to the Stax WooCommerce settings page in your WordPress admin to enable 
 
 == Changelog ==
 
+= 1.2.3 =
+* Compatibility: WordPress 7.1
+* Compatibility: Elementor 4.2.4
+* Compatibility: Elementor Pro 4.2.4
+* Fix: Corrected Elementor availability checks so widgets and categories register properly with current Elementor versions.
+
 = 1.2.1 =
 * Fixed compatibility with Elementor 3.5+ (updated widget registration API)
 
@@ -99,3 +105,8 @@ Yes. Go to the Stax WooCommerce settings page in your WordPress admin to enable 
 
 = 1.0.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.2.3 =
+Elementor 4.2.4 compatibility update. Upgrade if WooCommerce widgets are not appearing with current Elementor versions.
